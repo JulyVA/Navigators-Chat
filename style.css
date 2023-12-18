@@ -1,0 +1,120 @@
+:root {
+    --verde: #45e268;
+    --verde-hover:hsl(133, 63%, 48%);
+}
+
+body {
+    background: #000;
+}
+
+.cabecera {
+    display: flex;
+    align-items: center;
+    height: 8%;
+    width: 100%;
+    background-color: var(--verde);
+    border-radius: 20px 20px 0 0;
+}
+
+.cabecera img {
+    height: 75%;
+    margin-left: 15px;
+    margin-bottom: 5px;
+}
+
+.info {
+    margin-left:10px;
+}
+
+.info h3 {
+    margin: 0;
+    font-size: 22px;
+    color: darkgreen;
+}
+
+.general {
+    width: 99%;
+    height: 98%;
+    position: absolute;
+    background-image: url(fondo.jpg);
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    outline: 5px solid var(--verde);
+    border-radius: 20px;
+}
+
+.mensajes {
+    height: 84%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+}
+
+.mensajes::-webkit-scrollbar {
+  width: 7px; 
+}
+.mensajes::-webkit-scrollbar-thumb {
+  background-color: rgba(128, 128, 128, 0.5);
+}
+
+.mensaje-recibido {
+    display: flex;
+    align-self: flex-start;
+    background-color: #fff;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 20px;
+    border-top-left-radius: 0;
+    outline: 2px solid #cfcfcf;
+    font-size: 20px;
+    max-width: 55%;
+}
+.mensaje-enviado {
+    display: flex;
+    align-self: flex-end;
+    background-color: var(--verde-hover);
+    margin: 20px;
+    padding: 20px;
+    border-radius: 20px;
+    border-top-right-radius: 0;
+    outline: 2px solid #cfcfcf;
+    font-size: 20px;
+    max-width: 55%;
+}
+
+.barra {
+    height: 8%;
+    width: 100%;
+    display: flex;
+    outline: 4.5px solid var(--verde);
+    border-radius: 0 0 20px 20px;
+}
+
+.texto {
+    height: 100%;
+    width: 70%;
+    border-bottom-left-radius: 20px;
+    border: none;
+    outline: none;
+    font-size: 25px;
+    padding-left: 25px;
+}
+
+.enviar {
+    height: 100%;
+    width: 30%;
+    border-bottom-right-radius: 20px;
+    border: none;
+    font-size: 25px;
+    color: darkgreen;
+    background-color: var(--verde);
+    outline: 4.5px solid var(--verde);
+}
+
+.enviar:hover {
+    background-color: var(--verde-hover);
+}
