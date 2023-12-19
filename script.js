@@ -30,7 +30,6 @@ const enviarMensaje=()=>{
 };
 
 navigator.serviceWorker.addEventListener("message",msg=>{
-    mensajes.scrollTop = mensajes.scrollHeight;
     if(!envio){
         const mensaje = document.createElement('div');
         mensaje.classList.add("mensaje-recibido");
@@ -38,4 +37,5 @@ navigator.serviceWorker.addEventListener("message",msg=>{
         mensajes.appendChild(mensaje);
     }
     envio=0;
+    mensajes.scrollTop = mensajes.scrollHeight;
 });
